@@ -6,7 +6,7 @@
     #grid(
       columns: (1fr, auto),
       align: (left, right),
-      [*Examen de Programación*], [Examen 2],
+      [*Examen de Programación*], [Examen 3],
     )
     #v(0.2cm)
     #line(length: 100%, stroke: 1pt + rgb("#1a1a1a"))
@@ -37,7 +37,7 @@
   #v(1.2cm)
   #text(size: 26pt, weight: "bold", fill: rgb("#000000"))[EXAMEN DE \ PROGRAMACIÓN]
   #v(0.4cm)
-  #text(size: 13pt, weight: "medium", fill: rgb("#333333"))[Examen 2 · Python]
+  #text(size: 13pt, weight: "medium", fill: rgb("#333333"))[Examen 3 · Python]
   #v(2cm)
 ]
 
@@ -99,85 +99,85 @@
 }
 // ESCRIBIR LOS PROBLEMAS.
 
+
 #problema(
   "1",
-  "Máximo sin max",
-  [Escribe una función que reciba una lista de números y retorne el valor máximo encontrado en ella. No está permitido utilizar la función max() incorporada de Python.],
-  [lista = [10, 5, 20, 8, 15]],
-  [maximo = 20],
+  "Eliminar Duplicados",
+  [Escribe una función que reciba una lista y devuelva una nueva lista con los mismos elementos pero sin duplicados, manteniendo el orden de su primera aparición.],
+  [lista = [1, 2, 2, 3, 4, 4, 5]],
+  [resultado = [1, 2, 3, 4, 5]],
 )
 
 #problema(
   "2",
-  "Promedio de Notas",
-  [Crea una función que calcule el promedio aritmético de una lista de calificaciones numéricas. El resultado debe ser un número flotante.],
-  [notas = [8, 9, 10, 7]],
-  [promedio = 8.5],
+  "Cálculo de la Mediana",
+  [Crea una función que calcule la mediana de una lista de números. Recuerda que si la cantidad de elementos es par, la mediana es el promedio de los dos valores centrales.],
+  [datos = [1, 3, 3, 6, 7, 8, 9]],
+  [mediana = 6],
 )
 
 #problema(
   "3",
-  "Contador de Palabras",
-  [Implementa una función que reciba una frase y devuelva el número total de palabras que contiene. Asume que las palabras están separadas por un solo espacio.],
-  [frase = "Aprender Python es divertido"],
-  [cantidad = 4],
+  "Intersección de Listas",
+  [Implementa una función que reciba dos listas y devuelva una nueva lista que contenga solo los elementos que están presentes en ambas.],
+  [a = [1, 2, 3], b = [2, 3, 4]],
+  [interseccion = [2, 3]],
 )
 
 #problema(
   "4",
-  "Conversor de Temperatura",
-  [Desarrolla una función que convierta una temperatura dada en grados Celsius a grados Fahrenheit. La fórmula es: $F = (C times 9/5) + 32$.],
-  [celsius = 25],
-  [fahrenheit = 77.0],
+  "Potencia de Dos",
+  [Desarrolla una función que determine si un número entero positivo es una potencia de 2 (es decir, $2^n$ para algún entero $n >= 0$).],
+  [numero = 16],
+  [es_potencia = True],
 )
 
 #problema(
   "5",
-  "Suma de Dígitos",
-  [Crea una función que tome un número entero positivo y retorne la suma de sus dígitos individuales.],
-  [numero = 1234],
-  [suma = 10],
+  "Contar Caracteres Únicos",
+  [Crea una función que reciba una cadena de texto y devuelva la cantidad de caracteres distintos que contiene (distinguiendo entre mayúsculas y minúsculas).],
+  [texto = "abracadabra"],
+  [unicos = 5],
 )
 
 #problema(
   "6",
-  "Filtrar Positivos",
-  [Escribe una función que reciba una lista de números enteros (positivos y negativos) y retorne una nueva lista que contenga solo los números mayores que cero.],
-  [numeros = [-10, 15, 0, -5, 20]],
-  [positivos = [15, 20]],
+  "Máximo Común Divisor",
+  [Implementa una función que calcule el MCD de dos números enteros positivos utilizando el algoritmo de Euclides.],
+  [a = 48, b = 18],
+  [mcd = 6],
 )
 
 #problema(
   "7",
-  "Reemplazar Caracteres",
-  [Implementa una función que reciba una cadena de texto y reemplace todos los espacios en blanco por guiones bajos .],
-  [texto = "Hola mundo desde Python"],
-  [resultado = "Hola_mundo_desde_Python"],
+  "Filtro de Longitud",
+  [Escribe una función que reciba una lista de palabras y un número entero $k$, y retorne solo aquellas palabras que tengan más de $k$ caracteres.],
+  [palabras = ["yo", "soy", "matematico"], k = 3],
+  [resultado = ["matematico"]],
 )
 
 #problema(
   "8",
-  "Generador de Tabla",
-  [Crea una función que reciba un número entero n y un entero limite, y retorne una lista con los primeros limite múltiplos de n (comenzando por $n times 1$).],
-  [n = 3, limite = 5],
-  [tabla = [3, 6, 9, 12, 15]],
+  "Suma de una Matriz",
+  [Dada una matriz representada como una lista de listas (ej. `[[1,2],[3,4]]`), crea una función que retorne la suma total de todos sus elementos.],
+  [matriz = [[1, 2], [3, 4]]],
+  [suma = 10],
 )
 
 #problema(
   "9",
-  "Longitud de Elementos",
-  [Desarrolla una función que reciba una lista de palabras y retorne una nueva lista con la longitud (número de letras) de cada palabra correspondiente.],
-  [palabras = ["sol", "luna", "estrella"]],
-  [longitudes = [3, 4, 8]],
+  "Capitalizar Frase",
+  [Desarrolla una función que reciba una frase y devuelva la misma frase pero con la primera letra de cada palabra en mayúscula.],
+  [frase = "hola mundo desde rust"],
+  [resultado = "Hola Mundo Desde Rust"],
 )
 
 #problema(
   "10",
-  "Año Bisiesto",
-  [Escribe una función que determine si un año es bisiesto. Un año es bisiesto si es divisible por 4, excepto aquellos divisibles por 100 que no sean divisibles por 400.],
-  [anio = 2024],
-  [es_bisiesto = True],
+  "Puntos en el Plano",
+  [Escribe una función que calcule la distancia euclidiana entre dos puntos $(x_1, y_1)$ y $(x_2, y_2)$. La fórmula es $d = sqrt((x_2-x_1)^2 + (y_2-y_1)^2)$.],
+  [p1 = (0, 0), p2 = (3, 4)],
+  [distancia = 5.0],
 )
-
 
 
