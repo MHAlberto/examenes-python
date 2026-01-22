@@ -6,7 +6,7 @@
     #grid(
       columns: (1fr, auto),
       align: (left, right),
-      [*Examen de Programación*], [Examen 2],
+      [*Examen de Programación*], [Examen 3],
     )
     #v(0.2cm)
     #line(length: 100%, stroke: 1pt + rgb("#1a1a1a"))
@@ -37,7 +37,7 @@
   #v(1.2cm)
   #text(size: 26pt, weight: "bold", fill: rgb("#000000"))[EXAMEN DE \ PROGRAMACIÓN]
   #v(0.4cm)
-  #text(size: 13pt, weight: "medium", fill: rgb("#333333"))[Examen 2 · Python]
+  #text(size: 13pt, weight: "medium", fill: rgb("#333333"))[Examen 3 · Python]
   #v(2cm)
 ]
 
@@ -99,85 +99,87 @@
 }
 // ESCRIBIR LOS PROBLEMAS.
 
+
 #problema(
   "1",
-  "Máximo sin max",
-  [Escribe una función que reciba una lista de números y retorne el valor máximo encontrado en ella. No está permitido utilizar la función max() incorporada de Python.],
-  [lista = [10, 5, 20, 8, 15]],
-  [maximo = 20],
+  "Centrado de Texto",
+  [Desarrolla una función que centre una cadena en un ancho de 20 caracteres, rellenando con espacios.],
+  [texto = "Título"],
+  ["       Título       "],
 )
 
 #problema(
   "2",
-  "Promedio de Notas",
-  [Crea una función que calcule el promedio aritmético de una lista de calificaciones numéricas. El resultado debe ser un número flotante.],
-  [notas = [8, 9, 10, 7]],
-  [promedio = 8.5],
+  "Alineación a la Derecha",
+  [Crea una función que alinee una cadena a la derecha en un ancho de 15 caracteres.],
+  [texto = "100"],
+  ["            100"],
 )
 
 #problema(
   "3",
-  "Contador de Palabras",
-  [Implementa una función que reciba una frase y devuelva el número total de palabras que contiene. Asume que las palabras están separadas por un solo espacio.],
-  [frase = "Aprender Python es divertido"],
-  [cantidad = 4],
+  "Formato de ID con Ceros",
+  [Implementa una función que reciba un número como string y lo rellene con ceros a la izquierda hasta tener 6 dígitos. Usa zfill.],
+  [id_num = "42"],
+  ["000042"],
 )
 
 #problema(
   "4",
-  "Conversor de Temperatura",
-  [Desarrolla una función que convierta una temperatura dada en grados Celsius a grados Fahrenheit. La fórmula es: $F = (C times 9/5) + 32$.],
-  [celsius = 25],
-  [fahrenheit = 77.0],
+  "Decoración con Asteriscos",
+  [Desarrolla una función que centre una palabra en 30 caracteres y rellene con asteriscos (`*`) en lugar de espacios.],
+  [palabra = "IMPORTANTE"],
+  [`"**********IMPORTANTE**********"`],
 )
 
 #problema(
   "5",
-  "Suma de Dígitos",
-  [Crea una función que tome un número entero positivo y retorne la suma de sus dígitos individuales.],
-  [numero = 1234],
-  [suma = 10],
+  "Tabla Alineada",
+  [Crea una función que reciba un nombre y una edad (como strings), y genere una línea de tabla donde el nombre esté alineado a la izquierda en 20 caracteres y la edad a la derecha en 5 caracteres. Separa con un pipe (|).],
+  [nombre = "Ana", edad = "25"],
+  ["Ana                 |   25"],
 )
+
+= Nivel Avanzado - Operaciones Combinadas
+
+== Manipulación Compleja
 
 #problema(
   "6",
-  "Filtrar Positivos",
-  [Escribe una función que reciba una lista de números enteros (positivos y negativos) y retorne una nueva lista que contenga solo los números mayores que cero.],
-  [numeros = [-10, 15, 0, -5, 20]],
-  [positivos = [15, 20]],
+  "Generador de Nombres de Usuario",
+  [Implementa una función que reciba un nombre y un apellido, y los concatene con un punto en medio para crear un nombre de usuario básico.],
+  [nombre = "Alan", apellido = "Turing"],
+  ["Alan.Turing"],
 )
 
 #problema(
   "7",
-  "Reemplazar Caracteres",
-  [Implementa una función que reciba una cadena de texto y reemplace todos los espacios en blanco por guiones bajos .],
-  [texto = "Hola mundo desde Python"],
-  [resultado = "Hola_mundo_desde_Python"],
+  "Reemplazo de Caracteres",
+  [Desarrolla una función que reciba una fecha en formato "DD/MM/AAAA" y cambie todas las barras diagonales (/) por guiones (-).],
+  [fecha = "15/05/2026"],
+  ["15-05-2026"],
 )
 
 #problema(
   "8",
-  "Generador de Tabla",
-  [Crea una función que reciba un número entero n y un entero limite, y retorne una lista con los primeros limite múltiplos de n (comenzando por $n times 1$).],
-  [n = 3, limite = 5],
-  [tabla = [3, 6, 9, 12, 15]],
+  "Buscador de Subcadenas con Sensibilidad",
+  [Desarrolla una función que verifique si una cadena comienza con la palabra "Python". El resultado debe ser un valor booleano y debe ser sensible a mayúsculas.],
+  [texto = "Python es un lenguaje"],
+  [True],
 )
 
 #problema(
   "9",
-  "Longitud de Elementos",
-  [Desarrolla una función que reciba una lista de palabras y retorne una nueva lista con la longitud (número de letras) de cada palabra correspondiente.],
-  [palabras = ["sol", "luna", "estrella"]],
-  [longitudes = [3, 4, 8]],
+  "Extracción y Normalización",
+  [Crea una función que reciba un email, extraiga solo la parte antes del @ (el nombre de usuario), elimine espacios y lo convierta a minúsculas.],
+  [`email = "  Usuario.Nombre@ejemplo.com  "`],
+  ["usuario.nombre"],
 )
 
 #problema(
   "10",
-  "Año Bisiesto",
-  [Escribe una función que determine si un año es bisiesto. Un año es bisiesto si es divisible por 4, excepto aquellos divisibles por 100 que no sean divisibles por 400.],
-  [anio = 2024],
-  [es_bisiesto = True],
+  "Creador de Acrónimos",
+  [Implementa una función que reciba una frase y genere un acrónimo tomando la primera letra de cada palabra y convirtiéndolas a mayúsculas. Usa split, iteración y upper.],
+  [frase = "Ciencia de Datos Aplicada"],
+  ["CDA"],
 )
-
-
-

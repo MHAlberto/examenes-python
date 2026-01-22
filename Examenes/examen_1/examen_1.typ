@@ -6,7 +6,7 @@
     #grid(
       columns: (1fr, auto),
       align: (left, right),
-      [*Examen de Programación*], [Examen 3],
+      [*Examen de Programación*], [Examen 1],
     )
     #v(0.2cm)
     #line(length: 100%, stroke: 1pt + rgb("#1a1a1a"))
@@ -37,7 +37,7 @@
   #v(1.2cm)
   #text(size: 26pt, weight: "bold", fill: rgb("#000000"))[EXAMEN DE \ PROGRAMACIÓN]
   #v(0.4cm)
-  #text(size: 13pt, weight: "medium", fill: rgb("#333333"))[Examen 3 · Python]
+  #text(size: 13pt, weight: "medium", fill: rgb("#333333"))[Examen 1 · Python]
   #v(2cm)
 ]
 
@@ -100,84 +100,86 @@
 // ESCRIBIR LOS PROBLEMAS.
 
 
+
 #problema(
   "1",
-  "Eliminar Duplicados",
-  [Escribe una función que reciba una lista y devuelva una nueva lista con los mismos elementos pero sin duplicados, manteniendo el orden de su primera aparición.],
-  [lista = [1, 2, 2, 3, 4, 4, 5]],
-  [resultado = [1, 2, 3, 4, 5]],
+  "Cálculo de Longitud",
+  [Escribe una función que reciba una cadena de texto y devuelva su longitud total. Recuerda que los espacios y signos de puntuación también cuentan como caracteres.],
+  [texto = "Python 2026!"],
+  [12],
 )
 
 #problema(
   "2",
-  "Cálculo de la Mediana",
-  [Crea una función que calcule la mediana de una lista de números. Recuerda que si la cantidad de elementos es par, la mediana es el promedio de los dos valores centrales.],
-  [datos = [1, 3, 3, 6, 7, 8, 9]],
-  [mediana = 6],
+  "Acceso Extremo",
+  [Crea una función que reciba una cadena y retorne una nueva cadena compuesta únicamente por el primer y el último carácter de la entrada. Asume que la cadena tiene al menos dos caracteres.],
+  [texto = "Matemáticas"],
+  ["Ms"],
 )
 
 #problema(
   "3",
-  "Intersección de Listas",
-  [Implementa una función que reciba dos listas y devuelva una nueva lista que contenga solo los elementos que están presentes en ambas.],
-  [a = [1, 2, 3], b = [2, 3, 4]],
-  [interseccion = [2, 3]],
+  "Penúltimo Carácter",
+  [Desarrolla una función que reciba una cadena y devuelva su penúltimo carácter utilizando indexación negativa.],
+  [texto = "Algoritmo"],
+  ["m"],
 )
 
 #problema(
   "4",
-  "Potencia de Dos",
-  [Desarrolla una función que determine si un número entero positivo es una potencia de 2 (es decir, $2^n$ para algún entero $n >= 0$).],
-  [numero = 16],
-  [es_potencia = True],
+  "Búsqueda de Subcadena",
+  [Crea una función que reciba un texto y una palabra, y verifique si la palabra existe dentro del texto (case-sensitive). Debe retornar un valor booleano.],
+  [texto = "Machine Learning es fascinante", palabra = "Learning"],
+  [True],
 )
 
 #problema(
   "5",
-  "Contar Caracteres Únicos",
-  [Crea una función que reciba una cadena de texto y devuelva la cantidad de caracteres distintos que contiene (distinguiendo entre mayúsculas y minúsculas).],
-  [texto = "abracadabra"],
-  [unicos = 5],
+  "Contador de Carácter",
+  [Implementa una función que reciba una cadena y un carácter, y cuente cuántas veces aparece ese carácter en la cadena usando un bucle for.],
+  [texto = "estadística", caracter = "a"],
+  [2],
 )
 
 #problema(
   "6",
-  "Máximo Común Divisor",
-  [Implementa una función que calcule el MCD de dos números enteros positivos utilizando el algoritmo de Euclides.],
-  [a = 48, b = 18],
-  [mcd = 6],
+  "Slicing Inverso",
+  [Utilizando la técnica de rebanado (slicing), crea una función que reciba una cadena y devuelva la misma cadena pero invertida.],
+  [texto = "Logaritmo"],
+  ["omtiragoL"],
 )
 
 #problema(
   "7",
-  "Filtro de Longitud",
-  [Escribe una función que reciba una lista de palabras y un número entero $k$, y retorne solo aquellas palabras que tengan más de $k$ caracteres.],
-  [palabras = ["yo", "soy", "matematico"], k = 3],
-  [resultado = ["matematico"]],
+  "Extracción de Subcadenas",
+  [Escribe una función que extraiga los primeros 5 caracteres de cualquier cadena proporcionada. Si la cadena tiene menos de 5, debe devolverla completa.],
+  [texto = "Estadística"],
+  ["Estad"],
 )
 
 #problema(
   "8",
-  "Suma de una Matriz",
-  [Dada una matriz representada como una lista de listas (ej. `[[1,2],[3,4]]`), crea una función que retorne la suma total de todos sus elementos.],
-  [matriz = [[1, 2], [3, 4]]],
-  [suma = 10],
+  "Salto de Caracteres",
+  [Crea una función que devuelva una cadena compuesta por uno de cada dos caracteres de la original (caracteres en posiciones de índice par: 0, 2, 4...).],
+  [texto = "Actuaría"],
+  ["Atar"],
 )
 
 #problema(
   "9",
-  "Capitalizar Frase",
-  [Desarrolla una función que reciba una frase y devuelva la misma frase pero con la primera letra de cada palabra en mayúscula.],
-  [frase = "hola mundo desde rust"],
-  [resultado = "Hola Mundo Desde Rust"],
+  "Extracción del Medio",
+  [Desarrolla una función que reciba una cadena y extraiga los caracteres desde la posición 3 hasta la 7 (sin incluir la 7) usando slicing.],
+  [texto = "Programación"],
+  ["gram"],
 )
 
 #problema(
   "10",
-  "Puntos en el Plano",
-  [Escribe una función que calcule la distancia euclidiana entre dos puntos $(x_1, y_1)$ y $(x_2, y_2)$. La fórmula es $d = sqrt((x_2-x_1)^2 + (y_2-y_1)^2)$.],
-  [p1 = (0, 0), p2 = (3, 4)],
-  [distancia = 5.0],
+  "Rotación a la Izquierda",
+  [Crea una función que reciba una cadena y un número n, y rote la cadena n posiciones a la izquierda usando slicing. Por ejemplo, rotar "abcdef" 2 posiciones da "cdefab".],
+  [texto = "DataScience", n = 4],
+  ["ScienceData"],
 )
+
 
 
