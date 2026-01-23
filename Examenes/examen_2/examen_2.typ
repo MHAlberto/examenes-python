@@ -101,82 +101,80 @@
 
 #problema(
   "1",
-  "Limpieza de Espacios",
-  [En el análisis de datos, las entradas suelen tener espacios accidentales al inicio o al final. Crea una función que elimine estos espacios en blanco.],
-  [texto = "   Data Science   "],
-  ["Data Science"],
+  "Normalización de Texto Multilínea",
+  [En minería de texto, los saltos de línea y tabulaciones ensucian los modelos. Crea una función que convierta cualquier cadena con múltiples líneas y espacios excesivos en una sola línea con espacios simples.],
+  [`texto = "Python \n  es\t\tgenial\n2026"`],
+  "Python es genial 2026",
 )
 
 #problema(
   "2",
-  "Limpieza Selectiva Izquierda",
-  [Desarrolla una función que elimine solo los espacios del lado izquierdo de una cadena, manteniendo los del lado derecho intactos.],
-  [texto = "   Python es genial   "],
-  ["Python es genial   "],
+  "Sanitización de Variables para SQL",
+  [Para evitar errores en bases de datos, desarrolla una función que reciba un nombre de columna, lo pase a minúsculas, elimine acentos y reemplace espacios por guiones bajos.],
+  [`columna = "Campaña de Inversión 2026"`],
+  "campana_de_inversion_2026",
 )
 
 #problema(
   "3",
-  "Eliminación de Puntuación",
-  [Crea una función que reciba una cadena y elimine todos los signos de puntuación (.,!?) de los extremos usando strip con parámetros.],
-  [texto = "...Hola Mundo!!!"],
-  ["Hola Mundo"],
+  "Validación de Formato Científico",
+  [Recibes datos numéricos que a veces vienen en notación científica como string. Crea una función que verifique si la cadena es un número válido (entero, decimal o científico) y devuelva True o False.],
+  [`valor = "1.25e-10"`],
+  `True`,
 )
 
 #problema(
   "4",
-  "Limpieza de Ceros",
-  [Implementa una función que elimine los ceros a la izquierda de una cadena numérica. Útil para normalizar identificadores.],
-  [texto = "000042"],
-  ["42"],
+  "Extracción de Métrica de Unidad",
+  [Dada una cadena que representa una medición, extrae solo la magnitud numérica como float, ignorando la unidad y los espacios.],
+  [`medida = "  -15.40 °C  "`],
+  -15.4,
 )
 
 #problema(
   "5",
-  "Doble Limpieza",
-  [Desarrolla una función que primero elimine espacios en blanco y luego elimine paréntesis de los extremos de una cadena.],
-  [texto = "  ((nombre))  "],
-  ["nombre"],
+  "Anonimización de Emails",
+  [Por seguridad de datos, crea una función que oculte el nombre de usuario de un correo dejando solo la primera letra, el dominio y la extensión.],
+  [`email = "mario.alberto@gmail.com"`],
+  "m****@gmail.com",
 )
-
-== Transformación de Caso
 
 #problema(
   "6",
-  "Normalización de Identificadores",
-  [En análisis de datos, a veces los nombres vienen con formatos inconsistentes. Crea una función que reciba un nombre y lo devuelva completamente en minúsculas.],
-  [nombre = "User_Admin_2026"],
-  ["user_admin_2026"],
+  "Limpieza de Logs de Sistema",
+  [Los logs vienen con una marca de tiempo entre corchetes. Crea una función que elimine los corchetes y devuelva solo la estampa de tiempo.],
+  [`log = "[2026-01-23 05:20:00] INFO: Success"`],
+  "2026-01-23 05:20:00",
 )
 
 #problema(
   "7",
-  "Conversión a Mayúsculas",
-  [Crea una función que convierta una cadena completa a mayúsculas, útil para códigos de país o constantes.],
-  [codigo = "mx"],
-  ["MX"],
+  "Extracción de Parámetros de URL",
+  [Dada una URL simple con un parámetro 'id', extrae el valor numérico del ID. Asume que siempre viene al final después de 'id='.],
+  [`url = "https://m2alberto.com/api?user=mario&id=8842"`],
+  "8842",
 )
 
 #problema(
   "8",
-  "Capitalización de Título",
-  [Desarrolla una función que reciba una frase y capitalice la primera letra de cada palabra usando el método apropiado.],
-  [frase = "análisis de datos con python"],
-  ["Análisis De Datos Con Python"],
+  "Detección de Lenguaje (Heurística)",
+  [Crea una función que determine si un texto es probablemente una pregunta en español, verificando si empieza con '¿' y termina con '?'.],
+  [`texto = "¿Cómo aprender Rust en 2026?"`],
+  `True`,
 )
 
 #problema(
   "9",
-  "Inversión de Caso",
-  [Implementa una función que invierta el caso de todos los caracteres: mayúsculas a minúsculas y viceversa.],
-  [texto = "PyThOn"],
-  ["pYtHoN"],
+  "Normalización de Precios Mixtos",
+  [Recibes precios que pueden usar coma o punto decimal. Desarrolla una función que reemplace la coma por punto y devuelva el float resultante.],
+  [`precio = "1.250,75"`],
+  1250.75,
 )
 
 #problema(
   "10",
-  "Comparación Case-Insensitive",
-  [Crea una función que reciba dos cadenas y verifique si son iguales ignorando mayúsculas y minúsculas. Debe retornar True o False.],
-  [texto1 = "Python", texto2 = "PYTHON"],
-  [True],
+  "Contador de Siglas (Uppercase)",
+  [En análisis de noticias, es útil contar siglas. Crea una función que devuelva una lista con todas las palabras que estén completamente en mayúsculas y tengan más de 2 caracteres.],
+  [`noticia = "La ONU y la NASA colaboran con el MIT"`],
+  `["ONU", "NASA", "MIT"]`,
 )
