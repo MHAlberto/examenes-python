@@ -162,7 +162,7 @@
   "Salto de Caracteres",
   [Crea una función que devuelva una cadena compuesta por uno de cada dos caracteres de la original (caracteres en posiciones de índice par: 0, 2, 4...).],
   [texto = "Actuaría"],
-  ["Atar"],
+  ["Ataí"],
 )
 
 #problema(
